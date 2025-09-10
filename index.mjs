@@ -166,7 +166,55 @@ console.log(" ");
 console.log("Donut with highest calories: " + donutWithMostCal.name + " With " + donutWithMostCal.nutrition_facts.nutrition.calories)
 
 
-//2
+//2.- Necesitamos saber si la ingesta de calorías, grasas y carbohidratos puede mellar nuestra agilidad por lo que necesitamos:
+
+	//Listar todos los donuts y sus calorías (+ 50 exp)
+
+function listAllDonutsCalories ()
+{
+    console.log("")
+
+    console.log("lista de donuts con sus calories")
+
+    console.log("------")
+    for (let i = 0; i < donuts.length; ++i)
+    {
+
+
+        console.log(donuts[i].name + " : " + donuts[i].nutrition_facts.nutrition.calories + " calories ")
+    }
+}
+listAllDonutsCalories ();
+
+//Listar todos los donuts y sus carbohidratos (+ 50 exp)
+
+function listAllDonutsCarbs ()
+{
+    console.log("")
+
+    console.log("lista de donuts con sus calories")
+
+    console.log("------")
+    for (let i = 0; i < donuts.length; ++i)
+    {
+
+
+        console.log(donuts[i].name + " : " + donuts[i].nutrition_facts.nutrition.carbohydrate.carbs_detail.amount + " carbs ")
+    }
+}
+listAllDonutsCarbs ();
+
+//Mostrar la media de calorías de todos los donuts (+ 50 exp)
+
+function createArrayDataCal()
+{
+    let arrayofCal = [];
+
+    // for (let i = 0; i < donuts.length; ++i)
+    // {
+    //     if()
+    // }
+}
 
 
 
