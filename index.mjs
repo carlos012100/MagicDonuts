@@ -11,6 +11,7 @@ function donutWithMostSugar()
     let donutWithMostSugar = donuts[0];
 
     for (let i = 0; i < donuts.length; i++)
+
     {
         let currentSugarDonut = data.items.item[i].nutrition_facts.nutrition.carbohydrate.carbs_detail.type.sugars
 
@@ -41,6 +42,8 @@ function findIronInDonut ()
 {
     let donutWithMostIron = null;
 
+    let maxIron = 0;
+
     for (let i = 0; i < donuts.length; ++i)
     {
         for (let j = 0; j < donuts[i].nutrition_facts.nutrition.vitamins.length; ++j)
@@ -52,7 +55,19 @@ function findIronInDonut ()
             {
 
                 let ironPercent = parseInt(donutVitamin[j].percent)
+
                 console.log(ironPercent)
+
+                if(maxIron < ironPercent)
+                {
+                    maxIron = ironPercent;
+
+                    console.log(maxIron)
+
+                    donutWithMostIron = donutVitamin[j]
+
+                    console.log(donutVitamin[j])
+                }
          
             }
         }
